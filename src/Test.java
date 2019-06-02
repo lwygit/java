@@ -15,9 +15,9 @@ public class Test {
         System.out.println("----欢迎使用用户管理系统----");
 
         do {
-            System.out.println("---------------------------------------------------------------");
-            System.out.println("1、登录\t2、注册\t3、退出系统");
-            System.out.println("---------------------------------------------------------------");
+            System.out.println("————————————————————————————————");
+            System.out.println("| 1、登录  2、注册  3、退出系统  |");
+            System.out.println("————————————————————————————————");
             System.out.println("请选择：");
             String s1, name, password;
             Test test = new Test();
@@ -32,9 +32,10 @@ public class Test {
                         System.out.println("用户登录成功！");
                         do {
                             User user = new User();
-                            System.out.println("---------------------------------------------------------------");
-                            System.out.println("1、查看所有用户\t2、查看单个用户\t3、新增用户\t4、修改用户信息\t5、删除用户\t6、退出系统");
-                            System.out.println("---------------------------------------------------------------");
+
+                            System.out.println("————————————————————————————————————————————————————————————————————————————————————————");
+                            System.out.println("| 1、查看所有用户  2、查看单个用户  3、新增用户  4、修改用户信息  5、删除用户  6、退出系统  |");
+                            System.out.println("————————————————————————————————————————————————————————————————————————————————————————");
                             System.out.println("请选择：");
 
                             s1 = input.nextLine();
@@ -240,7 +241,7 @@ public class Test {
         String password;
         String email;
 
-        public void setId(String id) {
+        void setId(String id) {
             this.id = id;
         }
 
@@ -248,32 +249,32 @@ public class Test {
             return id;
         }
 
-        public void setName(String name) {
+        void setName(String name) {
             this.name = name;
         }
 
-        public String getName() {
+        String getName() {
             return name;
         }
 
-        public void setEmail(String email) {
+        void setEmail(String email) {
             this.email = email;
         }
 
-        public String getEmail() {
+        String getEmail() {
             return email;
         }
 
-        public void setPassword(String password) {
+        void setPassword(String password) {
             this.password = password;
         }
 
-        public String getPassword() {
+        String getPassword() {
             return password;
         }
     }
 
-    public void save(Document doc) throws IOException {
+    void save(Document doc) throws IOException {
         OutputFormat format = OutputFormat.createPrettyPrint();
         XMLWriter xmlWriter = new XMLWriter(new FileOutputStream("XMLTest.xml"), format);
         xmlWriter.write(doc);

@@ -26,7 +26,6 @@ public class Main {
     }
 
     public void setNum() {
-        num
     }
 
     void readme() {
